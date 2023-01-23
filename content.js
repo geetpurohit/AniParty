@@ -77,5 +77,7 @@ function sendtime(){
     var ExtensionId = 'anmkfccloggodifmempjhfdkfhgcgbhd';
     const res = new Date(1000 * document.querySelector('video').currentTime).toISOString().slice(11, 19);
     chrome.runtime.sendMessage(ExtensionId, {timeinfo:res})
-
+    chrome.runtime.sendMessage('aaaa', (response) => {
+        console.log('received user data', response);
+      });
 }
