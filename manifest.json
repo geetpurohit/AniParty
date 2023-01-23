@@ -1,0 +1,23 @@
+{
+    "name": "AniParty",
+    "version": "1.0.0",
+    "description": "Degen Time",
+    "manifest_version": 3,
+    "author": "Geet Purohit, Krishna P",
+    "action":{
+        "default_popup": "popup.html",
+        "default_title": "AniParty"
+    },
+    "content_scripts": [],
+
+    "background": {
+          "service_worker": "background.js"
+        }
+      ,
+
+    "permissions": ["storage", "activeTab", "scripting", "webNavigation"],
+    "host_permissions": [
+        "https://kwik.cx/*"
+      ],
+    "options_page": "options.html"
+}
